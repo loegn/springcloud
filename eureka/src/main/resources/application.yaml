@@ -1,11 +1,52 @@
+spring:
+  application:
+    name: spring-cloud-eureka
+#server:
+#  port: 8101
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+#    serviceUrl:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+---
+spring:
+  profiles: peer1
 server:
   port: 8101
-
 eureka:
   instance:
-    hostname: localhost
+    hostname: peer1
+    instance-id: eureka-8101
   client:
-    registerWithEureka: false
-    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://peer2:8102/eureka/,http://peer3:8103/eureka/
+
+---
+spring:
+  profiles: peer2
+server:
+  port: 8102
+eureka:
+  instance:
+    hostname: peer2
+    instance-id: eureka-8102
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8101/eureka/,http://peer3:8103/eureka/
+
+---
+spring:
+  profiles: peer3
+server:
+  port: 8103
+eureka:
+  instance:
+    hostname: peer3
+    instance-id: eureka-8103
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8101/eureka/,http://peer2:8102/eureka/
