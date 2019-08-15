@@ -1,20 +1,20 @@
 package com.example.springcloud.custom.sevice;
 
-import com.example.springcloud.custom.controller.TestService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @date : 2019/08/15
  * @author: liangenmao
  */
-@Service
-public class HelloService {
-    @Autowired
-    RestTemplate restTemplate;
+@FeignClient("provider-hi")
+public interface HelloService {
 
-    public String hiService(String name) {
-        return restTemplate.getForObject("http://SERVICE-HI/hi?name=" + name, String.class);
-    }
+    @GetMapping("/getRequest")
+    String get(@RequestParam String name);
+
+    @PostMapping("/postRequest")
+    String post(@RequestParam String name);
 }
