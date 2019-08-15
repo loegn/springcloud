@@ -1,9 +1,21 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8100/eureka/
-server:
-  port: 8200
+      defaultZone: http://localhost:8101/eureka/
 spring:
   application:
     name: provider-hi
+  profiles:
+    active: peer1
+
+---
+spring:
+  profiles: peer1
+server:
+  port: 8201
+
+---
+spring:
+  profiles: peer2
+server:
+  port: 8202
