@@ -11,8 +11,9 @@
 
     <modules>
         <module>eureka</module>
-        <module>server</module>
-        <module>custom</module>
+        <module>producer</module>
+        <module>consumer</module>
+        <module>config</module>
     </modules>
 
     <dependencies>

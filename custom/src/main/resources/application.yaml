@@ -1,8 +1,0 @@
-server:
-  port: 8301
-spring:
-  application:
-    name: customer
-feign:
-  hystrix:
-    enabled: true

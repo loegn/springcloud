@@ -5,7 +5,7 @@ spring:
         git:
           uri: https://github.com/loegn/config
 #          label: master
-          search-paths:
+          search-paths: consumer-config,producer-config
   application:
     name: config-center
   profiles:
