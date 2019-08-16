@@ -13,7 +13,13 @@
         <module>eureka</module>
         <module>server</module>
         <module>custom</module>
-        <module>server2</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
