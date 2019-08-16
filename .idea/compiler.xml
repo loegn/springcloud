@@ -8,9 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="consumer" />
         <module name="api" />
-        <module name="eureka" />
-        <module name="producer" />
         <module name="config" />
+        <module name="producer" />
+        <module name="eureka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

@@ -1,12 +1,38 @@
-server:
-  port: 8301
 spring:
+  profiles:
+    active: peer1
   application:
     name: consumer
-#  main:
-#    allow-bean-definition-overriding: true
+# bus
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: 123456
+  cloud:
+    bus:
+      trace:
+        enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+#feign
 feign:
   hystrix:
     enabled: true
 producer:
   name: producer
+
+---
+spring:
+  profiles: peer1
+server:
+  port: 8301
+
+---
+spring:
+  profiles: peer2
+server:
+  port: 8302
