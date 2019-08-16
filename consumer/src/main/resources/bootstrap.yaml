@@ -8,6 +8,7 @@ spring:
     config:
       name: consumer-config
       profile: dev
+#      profile: yaml
 #      uri: http://localhost:8400
       label: master
       discovery:

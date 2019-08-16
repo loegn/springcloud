@@ -18,6 +18,9 @@ public class HelloController {
     private HelloRemoteService helloRemoteService;
     @Value("${neo.hello}")
     private String hello;
+    @Value("${default}")
+    private String defaultValue;
+
     @Autowired
     private ApiRemoteService apiRemoteService;
 

@@ -4,8 +4,10 @@ spring:
       server:
         git:
           uri: https://github.com/loegn/config
+#          匹配任意文件夹下的配置
+          search-paths: '{application}'
 #          label: master
-          search-paths: consumer-config,producer-config
+#          search-paths: consumer-config,producer-config
   application:
     name: config-center
   profiles:
