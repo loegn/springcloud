@@ -1,16 +1,20 @@
-package com.example.springcloud.consumer.sevice;
+package com.example.springcloud.consumer.service;
 
-import com.example.springcloud.consumer.sevice.impl.HelloRemoteHystrix;
+import com.example.springcloud.consumer.service.impl.HelloRemoteHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.context.annotation.Primary;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import static com.example.springcloud.consumer.constant.ApplicationConstant.PRODUCER_NAME;
 
 /**
  * @date : 2019/08/15
  * @author: liangenmao
  */
-@FeignClient(value = "producer", fallback = HelloRemoteHystrix.class)
+@Primary
+@FeignClient(value = PRODUCER_NAME, contextId = "hello", fallback = HelloRemoteHystrix.class)
 public interface HelloRemoteService {
 
     @GetMapping("/getRequest")

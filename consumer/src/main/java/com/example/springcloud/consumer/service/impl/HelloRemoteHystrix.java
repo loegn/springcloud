@@ -1,6 +1,6 @@
-package com.example.springcloud.consumer.sevice.impl;
+package com.example.springcloud.consumer.service.impl;
 
-import com.example.springcloud.consumer.sevice.HelloRemoteService;
+import com.example.springcloud.consumer.service.HelloRemoteService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
 

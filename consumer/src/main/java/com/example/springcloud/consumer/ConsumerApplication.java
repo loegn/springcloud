@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = "com.example.springcloud.consumer.service")
 @EnableHystrixDashboard
 public class ConsumerApplication {
 
