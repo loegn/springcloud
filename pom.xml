@@ -17,11 +17,4 @@
         <module>api</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config</artifactId>
-        </dependency>
-    </dependencies>
-
 </project>

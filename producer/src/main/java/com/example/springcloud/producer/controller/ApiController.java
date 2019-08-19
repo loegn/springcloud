@@ -13,10 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiController implements ApiService {
     @Value("${server.port}")
     private String port;
+    @Value("${neo.hello}")
+    private String hello;
 
     @Override
     public String hello(String name) {
-        return "hello " + name + ", this is from " + port;
+        return hello + ", this is from " + port;
     }
 
     @Override

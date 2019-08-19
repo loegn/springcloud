@@ -1,12 +1,23 @@
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8101/eureka/
 spring:
   application:
     name: producer
   profiles:
     active: peer1
+ # bus
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    bus:
+      trace:
+        enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
 
 ---
 spring:

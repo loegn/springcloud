@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      name: consumer-config
+      name: producer-config
       profile: dev
 #      profile: yaml
 #      uri: http://localhost:8400
