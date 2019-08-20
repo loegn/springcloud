@@ -5,5 +5,5 @@ package com.example.springcloud.consumer.constant;
  * @author: liangenmao
  */
 public class ApplicationConstant {
-    public static final String PRODUCER_NAME = "${producer.name}";
+    public static final String PRODUCER_NAME = "producer";
 }

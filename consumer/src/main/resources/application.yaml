@@ -17,8 +17,12 @@ spring:
 feign:
   hystrix:
     enabled: true
-producer:
-  name: producer
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
 
 ---
 spring:
@@ -35,3 +39,11 @@ spring:
   profiles: peer2
 server:
   port: 8302
+
+---
+spring:
+  profiles: peer3
+  application:
+    name: consumer2
+server:
+  port: 8303

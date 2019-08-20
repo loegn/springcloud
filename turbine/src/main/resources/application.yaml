@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: turbine
+  profiles:
+    active: peer1
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8101/eureka/
+
+---
+spring:
+  profiles: peer1
+server:
+  port: 8601
+turbine:
+  app-config: consumer,consumer2
+#    aggregator:
+#      cluster-config: default
+  cluster-name-expression: new String('default')
+  combine-host-port: true

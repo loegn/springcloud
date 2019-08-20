@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: turbine
+  profiles:
+    active: peer1
+
+---
+spring:
+  profiles: peer1
+server:
+  port: 8501
