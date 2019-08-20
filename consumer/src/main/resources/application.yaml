@@ -13,11 +13,6 @@ spring:
     bus:
       trace:
         enabled: true
-management:
-  endpoints:
-    web:
-      exposure:
-        include: bus-refresh
 #feign
 feign:
   hystrix:
@@ -28,6 +23,10 @@ producer:
 ---
 spring:
   profiles: peer1
+  # bus
+  cloud:
+    bus:
+      id: 'bus:id'
 server:
   port: 8301
 

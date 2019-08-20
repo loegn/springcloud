@@ -2,6 +2,7 @@ package com.example.springcloud.producer.controller;
 
 import com.example.springcloud.api.service.ApiService;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author: liangenmao
  */
 @RestController
+@RefreshScope
 public class ApiController implements ApiService {
     @Value("${server.port}")
     private String port;

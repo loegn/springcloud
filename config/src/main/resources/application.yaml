@@ -8,10 +8,27 @@ spring:
           search-paths: '{application}'
 #          label: master
 #          search-paths: consumer-config,producer-config
+    bus:
+      trace:
+        enabled: true
   application:
     name: config-center
   profiles:
     active: peer1
+# bus
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - bus-refresh
+          - bus-env
+#eureka
 eureka:
   client:
     serviceUrl:
