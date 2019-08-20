@@ -15,6 +15,8 @@
         <module>consumer</module>
         <module>config</module>
         <module>api</module>
+        <module>dashboard</module>
+        <module>turbine</module>
     </modules>
 
 </project>
