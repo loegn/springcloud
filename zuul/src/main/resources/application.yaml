@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: zuul
+server:
+  port: 8701
+#eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8101/eureka/
+#zuul:
+#  routes:
+#    producer:
+#      path: '/producer/**'
+#      serviceId: producer

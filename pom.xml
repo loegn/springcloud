@@ -17,6 +17,7 @@
         <module>api</module>
         <module>dashboard</module>
         <module>turbine</module>
+        <module>zuul</module>
     </modules>
 
 </project>
