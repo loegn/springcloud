@@ -9,10 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import static com.example.springcloud.consumer.constant.ApplicationConstant.PRODUCER_NAME;
 
-/**
- * @date : 2019/08/15
- * @author: liangenmao
- */
 @Primary
 @FeignClient(value = PRODUCER_NAME, contextId = "hello", fallback = HelloRemoteHystrix.class)
 public interface HelloRemoteService {

@@ -6,10 +6,6 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @date : 2019/08/16
- * @author: liangenmao
- */
 @RestController
 @RefreshScope
 public class ApiController implements ApiService {

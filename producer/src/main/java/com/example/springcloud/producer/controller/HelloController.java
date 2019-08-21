@@ -3,10 +3,6 @@ package com.example.springcloud.producer.controller;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * @date : 2019/08/15
- * @author: liangenmao
- */
 @RestController
 public class HelloController {
     @Value("${server.port}")

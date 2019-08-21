@@ -3,10 +3,6 @@ package com.example.springcloud.consumer.service.impl;
 import com.example.springcloud.consumer.service.ApiRemoteService;
 import org.springframework.stereotype.Component;
 
-/**
- * @date : 2019/08/16
- * @author: liangenmao
- */
 @Component
 public class ApiRemoteHystrix implements ApiRemoteService {
     @Override

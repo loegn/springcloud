@@ -4,10 +4,6 @@ import com.example.springcloud.consumer.service.HelloRemoteService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- * @date : 2019/08/15
- * @author: liangenmao
- */
 @Component
 public class HelloRemoteHystrix implements HelloRemoteService {
     @Override

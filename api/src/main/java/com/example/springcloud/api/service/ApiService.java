@@ -5,11 +5,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- * @date : 2019/08/16
- * @author: liangenmao
- * @description:
- */
 public interface ApiService {
 
     @RequestMapping("/api/hello")
