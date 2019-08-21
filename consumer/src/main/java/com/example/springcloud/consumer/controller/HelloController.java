@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Random;
+
 @RestController
 @RefreshScope
 public class HelloController {
@@ -31,5 +33,16 @@ public class HelloController {
         String apiget = apiRemoteService.get(name);
         String apipost = apiRemoteService.post(name);
         return hello + br + get + br + post + br + api + br + apiget + br + apipost;
+    }
+
+    @GetMapping("/wait")
+    public String waitSeconds(int second){
+        System.out.println("enter");
+        try {
+            Thread.sleep(new Random().nextInt(2000));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "finished";
     }
 }
